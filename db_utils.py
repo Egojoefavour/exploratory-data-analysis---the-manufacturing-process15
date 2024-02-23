@@ -6,7 +6,8 @@ from sqlalchemy import create_engine
 class RDSDatabaseConnector:
     def __init__(self):
         self.dict = self.load_yaml_to_dict()
-        
+        self.engine = self.connect_db()
+        self.data_pandas = self.extract_data()
         
         
         
@@ -25,27 +26,33 @@ class RDSDatabaseConnector:
         DATABASE = cred["RDS_DATABASE"]
         PASSWORD = cred["RDS_PASSWORD"]
         self.engine = create_engine(f"{DATABASE_TYPE}+{'psycopg2'}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}")
-        print(self.engine)
+        
         return self.engine
         
     
     
     def extract_data(self):
         self.data_pandas = pd.read_sql_table("failure_data", self.engine) 
-        print(self.data_pandas)  
         return self.data_pandas
      
         
     def save_data(self):
+        self.extract_data()
         self.data_pandas.to_csv("data_pandas.csv", index=False)
         
         
     def load_data(self):
+        self.save_data()
         self.load_csv = pd.read_csv("data_pandas.csv")
-        print(self.load_csv)
         return self.load_csv
     
+    
 love = RDSDatabaseConnector()
-love.connect_db()
 love.load_data()
+df = love.load_data()
+print(df.head(5))
+
+
+
  
+
