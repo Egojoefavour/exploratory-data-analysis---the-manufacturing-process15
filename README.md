@@ -1,6 +1,7 @@
 # exploratory-data-analysis---the-manufacturing-process15
 
 ## project status
+This project is almost on the complete stage
 
 ### Project description
 
@@ -12,8 +13,29 @@ The data contains information about 10k sessions of the machinery producing prod
 
 Overall, this project will showcase the power of exploratory data analysis in uncovering valuable insights from large datasets and how insights can be leveraged to drive business success.
 ### file structure
+exploratory-data-analysis---the-manufacturing-process15 project tree
+├── db_utils.py
+│   
+│-- .gitignore     
+│     
+│-- credentials.yaml   
+│   
+¦
+│--- README.md     
+¦   
+└──
 
 ### usage and installation
+clone the repository by running the following command inside a terminal
+'''
+https://github.com/Egojoefavour/exploratory-data-analysis---the-manufacturing-process15.git
 
+'''
+
+Then within the folder, run
+'''
+db_utils.py
+
+'''
 
 ### license of the project
