@@ -98,7 +98,8 @@ class RDSDatabaseConnector:
         self.load_csv = pd.read_csv("data_pandas.csv")
         return self.load_csv
     
-df = RDSDatabaseConnector().load_data(saved_file= "data_pandas.csv")   
+if __name__ == "__main__":    
+    df = RDSDatabaseConnector().load_data(saved_file= "data_pandas.csv")   
 
 
 class DataTransform:
@@ -125,9 +126,9 @@ class DataTransform:
         return df
         
 
-    
-transformer = DataTransform()    
-print(transformer.to_categorical(df, col="Type"))
+if __name__ == "__main__":    
+   transformer = DataTransform()    
+   print(transformer.to_categorical(df, col="Type"))
 
 
 class DataFrameInfo:
@@ -224,13 +225,14 @@ class DataFrameInfo:
         '''
         return df.skew(numeric_only= True)
     
-info = DataFrameInfo()
-print(info.col_dtypes(df))
-print(info.dnst_cnt(df, col= "Type"))
-print(info.df_info(df))
-print(info.amount_null(df))
-print(info.count_null(df))
-print(info.skew_df(df))
+if __name__ == "__main__":
+    info = DataFrameInfo()
+    print(info.col_dtypes(df))
+    print(info.dnst_cnt(df, col= "Type"))
+    print(info.df_info(df))
+    print(info.amount_null(df))
+    print(info.count_null(df))
+    print(info.skew_df(df))
 
      
     
@@ -254,6 +256,20 @@ class  DataFrameTransform:
     map_type()
     
     map_pro_id()
+    
+    rm_rpm_outl()
+    
+    rm_tq_outl()
+    
+    range_seldfcol()
+    
+    range_sel_df_col_H()
+    
+    range_sel_df_col_M()
+    
+    range_sel_df_col_L()
+    
+    
     
     
     
@@ -456,20 +472,20 @@ class  DataFrameTransform:
               'Torque [Nm]','Tool wear [min]']][df['Type'] == 'L'].agg(['min', 'max'])
         
     
-   
-transfm = DataFrameTransform()
+if __name__ == "__main__":   
+    transfm = DataFrameTransform()
 
-transfm.imput_null(df)
-transfm.tw_min(df)
-transfm.map_type(df)
-transfm.map_pro_id(df)
-transfm.rm_rpm_outl(df)
-transfm.rm_tq_outl(df)
-transfm.save_df(df)
-print(transfm.range_seldfcol(df))
-print(transfm.range_sel_df_col_H(df))
-print(transfm.range_sel_df_col_M(df))
-print(transfm.range_sel_df_col_L(df))
+    transfm.imput_null(df)
+    transfm.tw_min(df)
+    transfm.map_type(df)
+    transfm.map_pro_id(df)
+    transfm.rm_rpm_outl(df)
+    transfm.rm_tq_outl(df)
+    transfm.save_df(df)
+    print(transfm.range_seldfcol(df))
+    print(transfm.range_sel_df_col_H(df))
+    print(transfm.range_sel_df_col_M(df))
+    print(transfm.range_sel_df_col_L(df))
 
 
 
@@ -490,6 +506,14 @@ class Plotter:
     co_ma()
     
     d_liers()
+    
+    vis_t_w()
+    
+    fal_rt()
+    
+    co_fal_rt()
+    
+    
     
     
     '''
@@ -603,16 +627,16 @@ class Plotter:
         plt.tight_layout()
         return   plt.show()
 
-
-plota = Plotter()
-print(plota.visual_null(df))
-print(plota.visual_skew(df, col= 'Rotational speed [rpm]'))
-print(plota.co_ma(df))
-print(plota.d_liers(df, col= 'Rotational speed [rpm]'))
-print(plota.q_plot(df, col='Rotational speed [rpm]'))
-print(plota.vis_t_w(df))
-print(plota.fal_rt(df))
-print(plota.co_fal_rt(df))
+if __name__ == "__main__":
+    plota = Plotter()
+    print(plota.visual_null(df))
+    print(plota.visual_skew(df, col= 'Rotational speed [rpm]'))
+    print(plota.co_ma(df))
+    print(plota.d_liers(df, col= 'Rotational speed [rpm]'))
+    print(plota.q_plot(df, col='Rotational speed [rpm]'))
+    print(plota.vis_t_w(df))
+    print(plota.fal_rt(df))
+    print(plota.co_fal_rt(df))
 
 
 
