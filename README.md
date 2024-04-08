@@ -1,6 +1,7 @@
 # exploratory-data-analysis---the-manufacturing-process15
 
 ## Table Of Contents
+```
 -Project Title
 -Table of Contents
 -Project status
@@ -8,6 +9,8 @@
 -File structure of the project
 -Usage And Installation
 -License information
+
+```
 
 
 ## Project Status
