@@ -1,17 +1,17 @@
 # exploratory-data-analysis---the-manufacturing-process15
 
 ## Table Of Contents
-Project Title
-Table of Contents
-Project status
-A description of the project
-File structure of the project
-Usage And Installation
-License information
+-Project Title
+-Table of Contents
+-Project status
+-A description of the project
+-File structure of the project
+-Usage And Installation
+-License information
 
 
 ## Project Status
-This project is at its  completed stage 08-04-2024
+This project is  complete  **08-04-2024**
 
 ### Project Description
 
@@ -24,6 +24,9 @@ The data contains information about 10k sessions of the machinery producing prod
 Overall, this project will showcase the power of exploratory data analysis in uncovering valuable insights from large datasets and how insights can be leveraged to drive business success.
 
 ### File Structure
+
+```
+
 C:.
 |---.gitignore
 |---credentials.yaml
@@ -46,22 +49,31 @@ C:.
         datatransform.cpython-312.pyc
         db_utils.cpython-312.pyc
 
+```
+
+
 ### Usage and Installation
 clone the repository by running the following command inside a terminal
-'''
+
+```
 https://github.com/Egojoefavour/exploratory-data-analysis---the-manufacturing-process15.git
 
-'''
+```
 
 Then within the folder run
 
-'''
+
+```
 db_utils.py
+
 datatransform.py
+
 dataframeinfo.ipynb
+
 dataframetransform.ipynb
+
 plotter.ipynb
 
-'''
+```
 
 ### License Of The Project
