@@ -100,7 +100,7 @@ class RDSDatabaseConnector:
     
 if __name__ == "__main__":    
     df = RDSDatabaseConnector().load_data(saved_file= "data_pandas.csv")   
-
+    print(df)
 
 
 
