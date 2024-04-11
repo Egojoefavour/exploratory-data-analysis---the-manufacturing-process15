@@ -14,7 +14,7 @@
 
 
 ## Project Status
-This project is  complete  **08-04-2024**
+This project is  complete  **11-04-2024**
 
 ### Project Description
 
@@ -31,19 +31,13 @@ Overall, this project will showcase the power of exploratory data analysis in un
 ```
 
 C:.
-|---.gitignore
-|---credentials.yaml
-|---dataframeinfo.ipynb
-|---dataframetransform.ipynb
-|---datatransform.py
-|---data_pandas.csv
-|---db_utils.py
-|   
-|---new_df.csv
-|---plotter.ipynb
-|---README.md
-|   
-|   
+|   .gitignore
+|   credentials.yaml
+|   dataframetransform.ipynb
+|   data_pandas.csv
+|   db_utils.py
+|   README.md
+|   visual.ipynb
 |
 +---exploratory-data-analysis---the-manufacturing-process15
 |       README.md
@@ -69,13 +63,16 @@ Then within the folder run
 ```
 db_utils.py
 
-datatransform.py
+```
 
-dataframeinfo.ipynb
+```
 
 dataframetransform.ipynb
 
-plotter.ipynb
+```
+
+```
+visual.ipynb
 
 ```
 
